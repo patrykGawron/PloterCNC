@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <TimeStamps>
+    <TimeStamp LogicalPath="PloterCNC.Hardware.hw" LastWriteTime="07/13/2020 11:01:44" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="X20CP3584" Type="X20CP3584" X="100" Y="100" />
+    <Module Name="6PPT50.0702-16B" Type="6PPT50.0702-16B" X="179" Y="273" />
+    <Module Name="8V1022.00-2-Y" Type="8V1022.00-2" X="300" Y="429" />
+    <Module Name="8AC120.60-1" Type="8AC120.60-1" X="314" Y="635.5" />
+    <Module Name="8AC114.60-2" Type="8AC114.60-2" X="302.8" Y="635.5" />
+    <Module Name="8V1022.00-2-X" Type="8V1022.00-2" X="399" Y="429" />
+    <Module Name="8AC120.60-1-X" Type="8AC120.60-1" X="413" Y="635.5" />
+    <Module Name="8AC114.60-2-X" Type="8AC114.60-2" X="401.8" Y="635.5" />
+  </Modules>
+  <Links>
+    <Link From="6PPT50.0702-16B" To="X20CP3584" FromPort="ETH1" ToPort="IF2" IsRoutedByUser="False">
+      <Point X="132" Y="187" />
+      <Point X="132" Y="187" />
+      <Point X="132" Y="200" />
+      <Point X="132" Y="385" />
+      <Point X="242.049957" Y="385" />
+      <Point X="242.049957" Y="380" />
+      <Point X="242.049957" Y="375" />
+      <Point X="242.049957" Y="375" />
+    </Link>
+    <Link From="X20CP3584" To="8AC114.60-2" FromPort="IF3" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="156" Y="187" />
+      <Point X="156" Y="187" />
+      <Point X="156" Y="200" />
+      <Point X="156" Y="663.3" />
+      <Point X="299.9" Y="663.3" />
+      <Point X="308.9" Y="663.3" />
+      <Point X="308.9" Y="663.3" />
+    </Link>
+    <Link From="8AC114.60-2" To="8AC114.60-2-X" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="308.9" Y="673.1" />
+      <Point X="308.9" Y="673.1" />
+      <Point X="299.9" Y="673.1" />
+      <Point X="295" Y="673.1" />
+      <Point X="295" Y="705" />
+      <Point X="355" Y="705" />
+      <Point X="355" Y="663.3" />
+      <Point X="398.9" Y="663.3" />
+      <Point X="407.9" Y="663.3" />
+      <Point X="407.9" Y="663.3" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

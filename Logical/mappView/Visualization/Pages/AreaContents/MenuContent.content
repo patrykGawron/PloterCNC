@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="MenuContent" height="600" width="200" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NavigationBar" id="MenuNavigationBar" top="0" left="0" width="200" height="400" zIndex="0" childPositioning="relative">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton1" top="0" left="0" width="180" height="50" zIndex="0" pageId="ProgramControlPage" text="Program control" mouseDownTextColor="rgba(25, 25, 112, 1)" margin="10px" permissionView="['Administrators', 'Everyone', 'Manager', 'User']" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton2" top="0" left="0" width="180" height="50" zIndex="1" pageId="ManualControlPage" text="Manual Control" mouseDownTextColor="rgba(25, 25, 112, 1)" margin="10px" permissionView="['Administrators', 'Manager']" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="AlarmPageButton" top="0" left="0" width="180" height="50" zIndex="2" pageId="AlarmPage" text="Alarms" mouseDownTextColor="rgba(25, 25, 112, 1)" margin="10px" permissionView="['Administrators', 'Manager', 'User']" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="LoginButton" top="530" left="0" width="180" height="50" zIndex="1" text="Log in" margin="10px" style="Command1" />
+    <Widget xsi:type="widgets.brease.LoginInfo" id="LoggedInUser" top="460" left="10" width="180" height="71" zIndex="2" multiLine="true" wordWrap="true" textColor="rgba(255, 255, 255, 1)" textAlign="center" />
+  </Widgets>
+</Content>

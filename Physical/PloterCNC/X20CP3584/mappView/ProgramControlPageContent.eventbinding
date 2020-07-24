@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ProgramControlPageContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="PowerOnEventBinding">
+      <Source xsi:type="opcUa.Event" refId="::Program:MpCnc2Axis_0.PowerOn" event="ValueChanged" />
+      <EventHandler condition="newValue = true">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ProgramControlPageContent" widgetRefId="ProgramControlPowerStatus">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+		</EventBinding>
+		<EventBinding id="PowerOffEventBinding">
+			<Source xsi:type="opcUa.Event" refId="::Program:MpCnc2Axis_0.PowerOn" event="ValueChanged" />
+			<EventHandler condition="newValue = false">
+				<Action>
+					<Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ProgramControlPageContent" widgetRefId="ProgramControlPowerStatus">
+						<Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Black" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
+		<EventBinding id="ProgramRunningBinding">
+			<Source xsi:type="opcUa.Event" refId="::Program:MpCnc2Axis_0.MoveActive" event="ValueChanged" />
+			<EventHandler condition="newValue = true">
+				<Action>
+					<Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ProgramControlPageContent" widgetRefId="ProgramControlProgramStatus">
+						<Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Green" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
+		<EventBinding id="ProgramNotRunningBinding">
+			<Source xsi:type="opcUa.Event" refId="::Program:MpCnc2Axis_0.MoveActive" event="ValueChanged" />
+			<EventHandler condition="newValue = false">
+				<Action>
+					<Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ProgramControlPageContent" widgetRefId="ProgramControlProgramStatus">
+						<Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Black" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+  </Bindings>
+</EventBindingSet>

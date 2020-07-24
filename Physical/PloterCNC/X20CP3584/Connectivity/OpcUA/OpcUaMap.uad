@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="7" ArVersion="C4.72">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases>
+      <EURanges Id="1">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">20</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
+      <EngineeringUnit Id="2" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
+    </EngineeringUnitAliases>
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <Task Name="Program">
+        <Variable Name="diInterruptProgram" />
+        <Variable Name="diResumeProgram" />
+        <Variable Name="diRunProgram" />
+        <Variable Name="diStart" />
+        <Variable Name="MotionStep" />
+        <Variable Name="MpCnc2Axis_0">
+          <Variable Name="X" EngineeringUnitId="1" />
+          <Variable Name="Y" />
+          <Variable Name="PowerOn" />
+          <Variable Name="MoveActive" />
+        </Variable>
+        <Variable Name="diDecreaseXAxis" />
+        <Variable Name="diDecreaseYAxis" />
+        <Variable Name="diIncreaseXAxis" />
+        <Variable Name="diIncreaseYAxis" />
+        <Variable Name="CncParameters">
+          <Variable Name="ProgramName" />
+        </Variable>
+        <Variable Name="diStop" />
+        <Variable Name="MpAlarmXCore_0" />
+        <Variable Name="AxisVelocity" EURangesId="1" EngineeringUnitId="2" />
+        <Variable Name="ProgramOption" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

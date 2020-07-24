@@ -1,0 +1,22 @@
+VAR
+	MpAlarmXHistory_0 : MpAlarmXHistory;
+	MpAlarmXCore_0 : MpAlarmXCore;
+	MpCnc2Axis_0 : MpCnc2Axis;
+	CncParameters : MpCnc2AxisParType;
+	MotionStep : MotionStep_type;
+	ProgramOption : BOOL;
+	AxisVelocity : REAL := 0.0;
+END_VAR
+(*Comands*)
+VAR
+	diErrorReset : BOOL;
+	diRunProgram : BOOL;
+	diResumeProgram : BOOL;
+	diInterruptProgram : BOOL;
+	diIncreaseYAxis : BOOL;
+	diDecreaseYAxis : BOOL;
+	diIncreaseXAxis : BOOL;
+	diDecreaseXAxis : BOOL;
+	diStop : BOOL;
+	diStart : BOOL;
+END_VAR
